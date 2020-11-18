@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20201117181721) do
   end
 
   create_table "preferences", force: :cascade do |t|
-    t.boolean  "allow_create_songs",   default: false
-    t.boolean  "allow_create_artists", default: false
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.boolean  "allow_create_songs"
+    t.boolean  "allow_create_artists"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "songs", force: :cascade do |t|

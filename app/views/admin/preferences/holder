@@ -1,0 +1,10 @@
+<h1>Preferences</h1>
+
+<%= form_for @preferences do |f| %>
+  <%= f.label :allow_new_songs %>
+  <%= f.check_box :allow_new_songs %><br>
+  <%= f.label :allow_new_artists %>
+  <%= f.check_box :allow_new_artists %>
+  <br>
+  <%= f.submit %>
+<% end %>

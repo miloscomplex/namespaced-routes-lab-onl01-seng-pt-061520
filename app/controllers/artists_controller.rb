@@ -9,10 +9,10 @@ class ArtistsController < ApplicationController
 
   def new
     #binding.pry
-    if Preference.class_method_test
-      redirect_to artist_path
-    else
+    if Preference.try(:allow_create_artists) == true
       @artist = Artist.new
+    else
+      redirect_to artists_path
     end
   end
 

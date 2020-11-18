@@ -1,11 +1,12 @@
 class Admin::PreferencesController < ApplicationController
 
   def index
-
+    # binding.pry
+    @preference = Preference.first_or_create({allow_create_artists: true, allow_create_songs: true})
   end
 
   def new
-    @preference = Preference.new
+    #@preference = Preference.new
   end
 
   def create
@@ -19,7 +20,7 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   private
